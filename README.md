@@ -1,1 +1,2 @@
-# RUBI-Django-Project
+# RUBI - Building a better world for women
+
