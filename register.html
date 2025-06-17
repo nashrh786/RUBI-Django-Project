@@ -1,0 +1,29 @@
+<!-- main/templates/main/register.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    {% block content %}
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="card p-4" style="width: 100%; max-width: 400px;">
+        <!--<div class="container mt-5">-->
+            <h2>Register</h2>
+            <form method="POST" action="{% url 'register' %}">
+                {% csrf_token %}
+                <label for="username">Username:</label>
+                <input type="text" name="username" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" required><br><br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" required><br><br>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

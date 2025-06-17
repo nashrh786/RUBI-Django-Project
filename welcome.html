@@ -1,0 +1,532 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <title>Women Empowerment - RUBI</title>
+<!--
+SOFTY PINKO
+https://templatemo.com/tm-535-softy-pinko
+-->
+
+    <!-- Additional CSS Files --> 
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'main/css/templatemo-softy-pinko.css' %}">
+
+    <style>
+        /* Main dropdown hover effect */
+.nav .dropdown:hover > .dropdown-menu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Styling for nested dropdown */
+.nav .dropdown-menu {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s ease-in-out;
+}
+
+.nav .hover-dropdown:hover > .dropdown-menu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.profile-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ff5ba7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.profile-letter {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 200px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+
+    </style>
+
+    </head>
+    
+    <body>
+        
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="#" class="logo">
+                            <img src="{% static 'main/images/mylo.png' %}" alt="Softy Pinko" height="70" style="margin-top: -20px;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="#welcome" class="active">Home</a></li>
+                            <li><a href="#features">About Us</a></li>
+                            <li class="dropdown">
+                                <a href="#work-process" class="dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown hover-dropdown">
+                                        <!-- Make Health clickable -->
+                                        <a href="/health1" class="dropdown-link">Health
+                                            <i class="arrow-icon">&#9662;</i> </a>
+                                        <!-- Add dropdown toggle (arrow icon) -->
+                                        <!--<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">-->
+                                        <!---->
+                                        <!--<a href="{% url 'health1' %}" class="dropdown-toggle" data-bs-toggle="dropdown">Health</a>-->
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#meal">Rainbow Meal</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#sleep">Sleep</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#hydrate">Hydrate</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#exercise">Exercise</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#mental">Mental Health</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#meditate">Meditation</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li class="dropdown hover-dropdown">
+                                        <!-- Make education clickable -->
+                                        <a href="/education" class="dropdown-link">Education
+                                            <i class="arrow-icon">&#9662;</i> </a>
+                                        <!-- Add dropdown toggle (arrow icon) -->
+                                        <!--<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">-->
+                                        <!---->
+                                        <!--<a href="{% url 'health1' %}" class="dropdown-toggle" data-bs-toggle="dropdown">Health</a>-->
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#it">Technology & IT</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#bus">Business</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#care">Healthcare</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#art">Arts & Design</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#teach">Teaching</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#personal">Personal Development</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-link" href="{% url 'job' %}">Job Portal</a></li>
+                                    <li><a class="dropdown-item" href="/chatbot">ChatBot</a></li>
+                                    <li><a class="dropdown-item" href="/discussion-panel">Discussion Panel</a></li>
+                                    <li><a class="dropdown-item" href="/support-24-7">Support 24/7</a></li>
+                                </ul>
+                            </li>
+                            <!-- ***** Domains Dropdown Start ***** -->
+                            <li class="dropdown hover-dropdown">
+                                <a href="{% url 'education' %}#work-process" class="dropdown-toggle">Domains</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#it">IT & Technology</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#bus">Business</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#care">Healthcare</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#art">Arts & Design</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#teach">Teaching</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#personal">Personal Development</a></li>
+                                </ul>
+                            </li>
+                            <!-- ***** Domains Dropdown End ***** -->
+                            <li><a href="#contact-us">Contact Us</a></li>
+
+                            {% if user.is_authenticated %}
+                            <li class="profile-menu">
+                                <div class="profile-icon" onclick="toggleDropdown()">
+                                    {% if user.profile.profilepic %}
+                                        <img src="{{ user.profile.profilepic.url }}" alt="Profile" class="profile-img">
+                                    {% else %}
+                                        <div class="profile-letter">{{ user.first_name|slice:":1"|upper }}</div>
+                                    {% endif %}
+                                </div>
+                                <div id="profileDropdown" class="profile-dropdown" style="display: none;">
+                                    <p>Hi, {{ user.username }}!</p>
+                                    <a href="{% url 'manageaccount' %}">Manage your Account</a><br>
+                                    <a href="{% url 'logout' %}">Logout</a>
+                                </div>
+                            </li>
+                            {% endif %}
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h1>Welcome {{ username }}!</h1>
+                        <h1>Building a <strong>Better World</strong><br><strong>For Womens</strong></h1>
+                        <p>Rubi is a platform dedicated to empowering women, providing
+                        resources, opportunities and a supportive community to help them achieve their goals</p>
+                        <!--<a href="{% url 'login1' %}" class="main-button-slider">Login</a> 
+                        <a href="{% url 'signup' %}" class="main-button-slider">Signup</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+
+    <!-- ***** Features Small Start ***** -->
+    <section class="section home-feature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                            <a href="/health1"> <!-- Add link to wrap the feature item -->
+                                <div class="features-small-item">
+                                    <div class="icon">
+                                        <i><img src="{% static 'main/images/featured-item-01.png' %}" alt=""></i>
+                                    </div>
+                                    <h5 class="features-title">Health</h5>
+                                    <p>The Greatest Wealth Is Health</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                            <a href="/education"> <!-- Add link to wrap the feature item -->
+                                <div class="features-small-item">
+                                    <div class="icon">
+                                        <i><img src="{% static 'main/images/featured-item-01.png' %}" alt=""></i>
+                                    </div>
+                                    <h5 class="features-title">Education</h5>
+                                    <p>Knowledge Is The Foundation Of Empowerment</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                            <a href="/job"> <!-- Add link to wrap the feature item -->
+                                <div class="features-small-item">
+                                    <div class="icon">
+                                        <i><img src="{% static 'main/images/featured-item-01.png' %}" alt=""></i>
+                                    </div>
+                                    <h5 class="features-title">Job Portal</h5>
+                                    <p>Your Pathway To Financial Independence</p>
+                                </div>
+                            </div>
+                        <!-- ***** Features Small Item End ***** -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** Features Small End ***** -->
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-top-70 padding-bottom-0" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <img src="{% static 'main/images/tree.png' %}" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title">Meet RUBI - A Platform For Womens</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>At Rubi, we are dedicated to empowering women by providing a comprehensive platform that supports health, education, career growth, and personal development. Our mission is to create a space where women can thrive, connect, and find the resources they need to succeed at every stage of life.
+                            
+                            <br>Join us in building a world where women are supported, inspired, and empowered to lead and succeed.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hr"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-bottom-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title">Why RUBI ?</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>RUBI, as the name says, represents the brilliance, strength, and value of every woman. Just like a ruby is one of the most precious and radiant gems, we see women as priceless and full of potential. </p>
+                        <p>It is more than just a name – it embodies our commitment to empowering women, helping them shine in all aspects of life. Every woman is a diamond in the making, and Rubi is here to support, uplift, and celebrate that journey.</p>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    <img src="{% static 'main/images/wy.png' %}" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+    <!-- ***** Home Parallax Start ***** -->
+    <section class="mini" id="work-process">
+        <div class="mini-content">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-6">
+                        <div class="info">
+                            <h1>What Do We Offer?</h1>
+                            <p>At Rubi, we offer a platform that empowers women with essential resources in health, education, career, support and 24/7 assistance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ***** Mini Box Start ***** -->
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="{% url 'health1' %}" class="mini-box">
+                            <i><img src="{% static 'main/images/work-process-item-01.png' %}" alt=""></i>
+                            <strong>Health</strong>
+                            <span>The Greatest Wealth Is Health.</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="{% url 'education' %}" class="mini-box">
+                            <i><img src="{% static 'main/images/work-process-item-01.png' %}" alt=""></i>
+                            <strong>Education</strong>
+                            <span>Empowerment Begins With Learning.</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="{% static 'main/images/work-process-item-01.png' %}" alt=""></i>
+                            <strong>Job Portal</strong>
+                            <span>Opportunities That Shape Your Future.</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="{% static 'main/images/work-process-item-01.png' %}" alt=""></i>
+                            <strong>Discussion Panel</strong>
+                            <span>Where Voices Unite, Ideas Ignite.</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="{% static 'main/images/work-process-item-01.png' %}" alt=""></i>
+                            <strong>ChatBot</strong>
+                            <span>Your Personal Assistant, Always At Your Service.</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="{% static 'main/images/work-process-item-01.png' %}" alt=""></i>
+                            <strong>Support 24/7</strong>
+                            <span>Here For You, Every Step Of The Way.</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- ***** Mini Box End ***** -->
+            </div>
+        </div>
+    </section>
+    <!-- ***** Home Parallax End ***** -->
+
+    <!-- ***** Contact Us Start ***** -->
+    <section class="section colored" id="contact-us">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">Talk To Us</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>Maecenas pellentesque ante faucibus lectus vulputate sollicitudin. Cras feugiat hendrerit semper.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+
+            <div class="row">
+                <!-- ***** Contact Text Start ***** -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <h5 class="margin-bottom-30">Keep in touch</h5>
+                    <div class="contact-text">
+                        <p>110-220 Quisque diam odio, maximus ac consectetur eu, 10260
+                        <br>auctor non lorem</p>
+                        <p>.</p>
+                    </div>
+                </div>
+                <!-- ***** Contact Text End ***** -->
+
+                <!-- ***** Contact Form Start ***** -->
+                <div class="col-lg-8 col-md-6 col-sm-12">
+                    <div class="contact-form">
+                        <form id="contact" action="" method="get">
+                          <div class="row">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                              <fieldset>
+                                <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                              <fieldset>
+                                <input name="email" type="email" class="form-control" id="email" placeholder="E-Mail Address" required="">
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                              <fieldset>
+                                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                              <fieldset>
+                                <button type="submit" id="form-submit" class="main-button">Send Message</button>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- ***** Contact Form End ***** -->
+            </div>
+        </div>
+    </section>
+    <!-- ***** Contact Us End ***** -->
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">Copyright &copy; 2024 RUBI </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- jQuery -->
+    <script src="{% static 'main/js/jquery-2.1.0.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'main/js/popper.js' %}"></script>
+    <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static 'main/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'main/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'main/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'main/js/imgfix.min.js' %}"></script> 
+    
+    <!-- Global Init -->
+    <script src="{% static 'main/js/custom.js' %}"></script>
+
+    <script> 
+    function toggleDropdown() {
+        var dropdown = document.getElementById("profileDropdown");
+        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.closest('.profile-menu')) {
+            var dropdown = document.getElementById("profileDropdown");
+        if (dropdown && dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+    }
+    }
+    };
+    </script>
+
+    <!--<p>Messages block loaded.</p>
+    {% if messages %}
+    <script>
+        {% for message in messages %}
+            alert("{{ message|escapejs }}");
+        {% endfor %}
+    </script>
+    {% else %}
+        <p>No messages.</p>
+  {% endif %}-->
+  </body>
+</html>

@@ -1,0 +1,371 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Women Empowerment - RUBI</title>
+<!--
+SOFTY PINKO
+https://templatemo.com/tm-535-softy-pinko
+-->
+
+    <!-- Additional CSS Files --> 
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'main/css/templatemo-softy-pinko.css' %}">
+
+    <style>
+        /* Main dropdown hover effect */
+.nav .dropdown:hover > .dropdown-menu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Styling for nested dropdown */
+.nav .dropdown-menu {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s ease-in-out;
+}
+
+.nav .hover-dropdown:hover > .dropdown-menu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: #f2f2f2;
+  /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
+}
+::selection{
+  background: #4158d0;
+  color: #fff;
+}
+.wrapper{
+  width: 380px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+.wrapper form{
+  padding: 10px 30px 50px 30px;
+}
+.wrapper form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+.wrapper form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.wrapper form .field input:focus,
+form .field input:valid{
+  border-color: #4158d0;
+}
+.wrapper form .field label{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+form .field input:focus ~ label,
+form .field input:valid ~ label{
+  top: 0%;
+  font-size: 16px;
+  color: #4158d0;
+  background: #fff;
+  transform: translateY(-50%);
+}
+form .content{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+form .content .checkbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .content input{
+  width: 15px;
+  height: 15px;
+  background: red;
+}
+form .content label{
+  color: #262626;
+  user-select: none;
+  padding-left: 5px;
+}
+form .content .pass-link{
+  color: "";
+}
+form .field input[type="submit"]{
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  transition: all 0.3s ease;
+}
+form .field input[type="submit"]:active{
+  transform: scale(0.95);
+}
+form .signup-link{
+  color: #262626;
+  margin-top: 20px;
+  text-align: center;
+}
+form .pass-link a,
+form .signup-link a{
+  color: #4158d0;
+  text-decoration: none;
+}
+form .pass-link a:hover,
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+    </style>
+
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="#" class="logo">
+                            <img src="{% static 'main/images/mylo.png' %}" alt="Softy Pinko" height="70" style="margin-top: -20px;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="{% url 'index' %}" class="active">Home</a></li>
+                            <li><a href="{% url 'index' %}#features">About Us</a></li>
+                            <li class="dropdown">
+                                <a href="#work-process" class="dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown hover-dropdown">
+                                        <!-- Make Health clickable -->
+                                        <a href="/health1" class="dropdown-link">Health
+                                            <i class="arrow-icon">&#9662;</i> </a>
+                                        <!-- Add dropdown toggle (arrow icon) -->
+                                        <!--<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">-->
+                                        <!---->
+                                        <!--<a href="{% url 'health1' %}" class="dropdown-toggle" data-bs-toggle="dropdown">Health</a>-->
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#meal">Rainbow Meal</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#sleep">Sleep</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#hydrate">Hydrate</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#exercise">Exercise</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#mental">Mental Health</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#meditate">Meditation</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li class="dropdown hover-dropdown">
+                                        <!-- Make education clickable -->
+                                        <a href="/education" class="dropdown-link">Education
+                                            <i class="arrow-icon">&#9662;</i> </a>
+                                        <!-- Add dropdown toggle (arrow icon) -->
+                                        <!--<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">-->
+                                        <!---->
+                                        <!--<a href="{% url 'health1' %}" class="dropdown-toggle" data-bs-toggle="dropdown">Health</a>-->
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#it">Technology & IT</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#bus">Business</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#care">Healthcare</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#art">Arts & Design</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#teach">Teaching</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#personal">Personal Development</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/job-portal">Job Portal</a></li>
+                                    <li><a class="dropdown-item" href="/chatbot">ChatBot</a></li>
+                                    <li><a class="dropdown-item" href="/discussion-panel">Discussion Panel</a></li>
+                                    <li><a class="dropdown-item" href="/support-24-7">Support 24/7</a></li>
+                                </ul>
+                            </li>
+                            <!-- ***** Domains Dropdown Start ***** -->
+                            <li class="dropdown hover-dropdown">
+                                <a href="{% url 'education' %}#work-process" class="dropdown-toggle">Domains</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#it">IT & Technology</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#bus">Business</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#care">Healthcare</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#art">Arts & Design</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#teach">Teaching</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#personal">Personal Development</a></li>
+                                </ul>
+                            </li>
+                            <!-- ***** Domains Dropdown End ***** -->
+                            <li><a href="#contact-us">Contact Us</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <section class="section home-feature">
+        <div class="container">
+            <div class="wrapper">
+            <div class="title">
+                User Login
+            </div>
+            <form action="{% url 'login1' %}" method="POST">
+                {% csrf_token %}
+                <div class="field">
+                    <input type="text" name = "username" required>
+                    <label>Enter your User Name</label>
+                </div>
+                <div class="field">
+                    <input type="password" name = "password" required>
+                    <label>Enter your Password</label>
+                </div>
+                <div class="content">
+                    <!--<div class="checkbox">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                    </div>-->
+                    <div class="pass-link">
+                        <a href="#">Forgot password?</a>
+                    </div>  
+                    <div class="loga-link">
+                        Login as <a href="{% url 'loga' %}">Admin?</a>
+                    </div>
+                </div>
+                <div class="field">
+                    <input type="submit" value="Login"  href="{% url 'two_factor_email' %}">
+                </div>
+                <div class="signup-link">
+                    Don't have an account? <a href="{% url 'signup' %}">Signup</a>
+                </div>
+            </form>
+            <!--{% if messages %} 
+                <div class="mt-3">
+                    {% for message in messages %}
+                        <div class="alert alert-danger">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}-->
+        </div>
+    </section>
+    <!-- jQuery -->
+    <script src="{% static 'main/js/jquery-2.1.0.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'main/js/popper.js' %}"></script>
+    <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static 'main/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'main/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'main/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'main/js/imgfix.min.js' %}"></script> 
+    
+    <!-- Global Init -->
+    <script src="{% static 'main/js/custom.js' %}"></script>
+
+    {% if messages %}
+    <script>
+      {% for message in messages %}
+        alert("{{ message|escapejs }}");
+      {% endfor %}
+    </script>
+    {% endif %}
+    </body>
+</html>
+
+
+
+
+
+
+
+   

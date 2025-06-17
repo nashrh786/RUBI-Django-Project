@@ -1,0 +1,652 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Women Empowerment - RUBI</title>
+<!--
+SOFTY PINKO
+https://templatemo.com/tm-535-softy-pinko
+-->
+
+    <!-- Additional CSS Files --> 
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'main/css/templatemo-softy-pinko.css' %}">
+
+    <style>
+        /* Main dropdown hover effect */
+.nav .dropdown:hover > .dropdown-menu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Styling for nested dropdown */
+.nav .dropdown-menu {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s ease-in-out;
+}
+
+.nav .hover-dropdown:hover > .dropdown-menu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: #f2f2f2;
+  /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
+}
+::selection{
+  background: #4158d0;
+  color: #fff;
+}
+.wrapper{
+  margin-top: 110px;
+  width: 750px;
+  height: 1050px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+.wrapper form{
+  padding: 10px 30px 50px 30px;
+}
+.wrapper form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+.wrapper form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.wrapper form .field input:focus,
+form .field input:valid{
+  border-color: #4158d0;
+}
+.wrapper form .field label{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+form .field input:focus ~ label,
+form .field input:valid ~ label{
+  top: 0%;
+  font-size: 16px;
+  color: #4158d0;
+  background: #fff;
+  transform: translateY(-50%);
+}
+form .content{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+form .content .checkbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .content input{
+  width: 15px;
+  height: 15px;
+  background: red;
+}
+form .content label{
+  color: #262626;
+  user-select: none;
+  padding-left: 5px;
+}
+form .content .pass-link{
+  color: "";
+}
+form .field input[type="submit"]{
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  transition: all 0.3s ease;
+}
+form .field input[type="submit"]:active{
+  transform: scale(0.95);
+}
+form .signup-link{
+  color: #262626;
+  margin-top: 20px;
+  text-align: center;
+}
+form .pass-link a,
+form .signup-link a{
+  color: #4158d0;
+  text-decoration: none;
+}
+form .pass-link a:hover,
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+.checkbox-group {
+  margin-bottom: 15px;
+}
+.checkbox-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.wrapper form .field select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  background: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.wrapper form .field select:focus {
+  border-color: #4158d0;
+}
+
+.wrapper form .field select:focus ~ label,
+.wrapper form .field select:valid ~ label {
+  top: 0%;
+  font-size: 16px;
+  color: #4158d0;
+  background: #fff;
+  transform: translateY(-50%);
+
+  .wrapper form .field select {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 20px;
+}
+}
+.birthdate-group {
+  margin-top: 20px;
+}
+
+.birthdate-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #262626;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.birthdate-fields {
+  height: 40px;
+  display: flex;
+  gap: 10px;
+}
+
+.birthdate-fields select,
+.birthdate-fields input {
+  height: 50px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  padding: 0 15px;
+  font-size: 16px;
+  outline: none;
+  flex: 1;
+  transition: all 0.3s ease;
+  color: #000; 
+}
+
+.birthdate-fields select:focus,
+.birthdate-fields input:focus {
+  border-color: #4158d0;
+}
+
+/* Style placeholder text in inputs */
+.birthdate-fields input::placeholder {
+  color: #999; /* grey for placeholder */
+}
+/* Style the first option (like 'Birth Month') in select dropdown */
+.birthdate-fields select option:first-child {
+  color: #000; /* grey for 'Birth Month' option */
+}
+/* All other dropdown options in black */
+.birthdate-fields select option:not(:first-child) {
+  color: #000;
+}
+/* But keep the first disabled option in grey */
+.birthdate-fields select:invalid {
+  color: #999;
+}
+.field.file-field {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+.field.file-field input[type="text"] {
+  height: 100%;
+  width: 100%;
+  padding: 0 160px 0 20px; /* leave room for the button on the right */
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  font-size: 16px;
+  color: #000;
+  position: relative;
+}
+
+.field.file-field label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999;
+  font-size: 17px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* When file is selected — hide label */
+.field.file-field input[type="text"]:focus + label,
+.field.file-field input[type="text"]:valid + label {
+  top: 0%;
+  font-size: 16px;
+  background: #fff;
+  color: #4158d0;
+  padding: 0 5px;
+  transform: translateY(-50%);
+}
+
+.choose-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+.field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    resize: vertical;
+    outline: none;
+    transition: 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.field textarea:focus {
+    border-color: #4158d0;
+    box-shadow: 0px 4px 20px rgba(255, 94, 126, 0.2);
+}
+
+.field label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #999;
+    transition: 0.2s ease all;
+    pointer-events: none;
+}
+
+.field input:focus + label,
+.field input:valid + label,
+.field textarea:focus + label,
+.field textarea:valid + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #4158d0;
+    background: #fff;
+    padding: 0 5px;
+}
+    </style>
+
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="#" class="logo">
+                            <img src="{% static 'main/images/mylo.png' %}" alt="Softy Pinko" height="70" style="margin-top: -20px;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="{% url 'index' %}" class="active">Home</a></li>
+                            <li><a href="{% url 'index' %}#features">About Us</a></li>
+                            <li class="dropdown">
+                                <a href="{% url 'index' %}#work-process" class="dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown hover-dropdown">
+                                        <!-- Make Health clickable -->
+                                        <a href="/health1" class="dropdown-link">Health
+                                            <i class="arrow-icon">&#9662;</i> </a>
+                                        <!-- Add dropdown toggle (arrow icon) -->
+                                        <!--<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">-->
+                                        <!---->
+                                        <!--<a href="{% url 'health1' %}" class="dropdown-toggle" data-bs-toggle="dropdown">Health</a>-->
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#meal">Rainbow Meal</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#sleep">Sleep</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#hydrate">Hydrate</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#exercise">Exercise</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#mental">Mental Health</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#meditate">Meditation</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li class="dropdown hover-dropdown">
+                                        <!-- Make education clickable -->
+                                        <a href="/education" class="dropdown-link">Education
+                                            <i class="arrow-icon">&#9662;</i> </a>
+                                        <!-- Add dropdown toggle (arrow icon) -->
+                                        <!--<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">-->
+                                        <!---->
+                                        <!--<a href="{% url 'health1' %}" class="dropdown-toggle" data-bs-toggle="dropdown">Health</a>-->
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#it">Technology & IT</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#bus">Business</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#care">Healthcare</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#art">Arts & Design</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#teach">Teaching</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#personal">Personal Development</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/job-portal">Job Portal</a></li>
+                                    <li><a class="dropdown-item" href="/chatbot">ChatBot</a></li>
+                                    <li><a class="dropdown-item" href="/discussion-panel">Discussion Panel</a></li>
+                                    <li><a class="dropdown-item" href="/support-24-7">Support 24/7</a></li>
+                                </ul>
+                            </li>
+                            <!-- ***** Domains Dropdown Start ***** -->
+                            <li class="dropdown hover-dropdown">
+                                <a href="{% url 'education' %}#work-process" class="dropdown-toggle">Domains</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#it">IT & Technology</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#bus">Business</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#care">Healthcare</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#art">Arts & Design</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#teach">Teaching</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#personal">Personal Development</a></li>
+                                </ul>
+                            </li>
+                            <!-- ***** Domains Dropdown End ***** -->
+                            <li><a href="#contact-us">Contact Us</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <section class="section home-feature">
+        <div class="container">
+            <div class="wrapper">
+            <div class="title">
+                Create RUBI Employer Account
+            </div>
+            <form name="signupForm" method="POST" enctype="multipart/form-data" action="{% url 'empsignup' %}" onsubmit="return validateForm();">
+                {% csrf_token %}
+                <div class="field">
+                  <input type="text" name="managername" required>
+                  <label>Hiring Manager Name</label>
+                </div>
+                <div class="field">
+                    <input type="text" name="compname" required>
+                    <label>Organization/Company Name</label>
+                </div>
+                <div class="field">
+                    <select name="companytype" required>
+                      <option value="" disabled selected hidden></option>
+                      <option value="">-- Select --</option>
+                      <option value="privatecompany">Private Company</option>
+                      <option value="startup">Startup</option>
+                      <option value="ngo">NGO</option>
+                      <option value="recruiter">Individual Recruiter</option>
+                    </select>
+                    <label>Organization Type</label>
+                </div>
+                <div class="field file-field">
+                    <input type="text" id="file-name" placeholder="Upload Company Logo" readonly>
+                    <label for="profilepic"></label>
+                    <input type="file" id="profilepic" name="profilepic" accept="image/*" style="display: none;">
+                    <button type="button" class="choose-btn" onclick="document.getElementById('profilepic').click()">Choose File</button>
+                </div>
+                <div class="field">
+                    <textarea name="desc" id="desc" rows="4" required></textarea>
+                    <label for="desc">Brief Organization Description</label>
+                </div>
+                <div class="field" style="margin-top: 80px;">
+                    <input type="text" name="city" required>
+                    <label>City/Location</label>
+                </div>
+                
+                <div class="field">
+                  <input type="email" name="email" required>
+                  <label>Email Address</label>
+                  {% if email_error %}
+                    <p style="color:red; font-size: 14px;">{{ email_error }}</p>
+                  {% endif %}
+                </div>
+                <!--<div class="field">
+                    <input type="text" name="username" required>
+                    <label>Perferred User Name</label>
+                    {% if username_error %}
+                      <p style="color:red; font-size: 14px;">{{ username_error }}</p>
+                    {% endif %}
+                </div>-->
+                <div class="field">
+                    <input type="text" name="username" required>
+                    <label>Perferred User Name</label>
+                    {% if username_error %}
+                      <p style="color:red; font-size: 14px;">{{ username_error }}</p>
+                    {% endif %}
+                </div>
+                <div class="field">
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+                <!--<div class="field">
+                  <input type="date" name="datebirth" required>
+                  <label>Birth Date</label>
+                </div>-->
+
+                <label><input type="checkbox" name="terms" required> I agree to the Terms & Conditions</label>
+
+                <div class="content">
+                    <!--<div class="checkbox">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                    </div>
+                    <div class="pass-link">
+                        <a href="#">Forgot password?</a>
+                    </div>-->
+                  <!--{% if messages %}
+                    {% for message in messages %}
+                      <p>{{ message }}</p>
+                    {% endfor %}
+                  {% endif %}-->
+                    <div class="signup-link">
+                        Already have an account? <a href="{% url 'login1' %}">Login</a>
+                    </div>
+                </div>
+                <div class="field">
+                    <input type="submit" value="Signup">
+                </div>
+                <!--<div class="signup-link">
+                    Already have an account? <a href="{% url 'login1' %}">Login</a>
+                </div>-->
+            </form>
+        </div>
+    </section>
+    <!-- jQuery -->
+    <script src="{% static 'main/js/jquery-2.1.0.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'main/js/popper.js' %}"></script>
+    <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static 'main/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'main/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'main/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'main/js/imgfix.min.js' %}"></script> 
+    
+    <!-- Global Init -->
+    <script src="{% static 'main/js/custom.js' %}"></script>
+
+    <script>
+      function validateForm() {
+        var username = document.forms["signupForm"]["username"].value;
+        var email = document.forms["signupForm"]["email"].value;
+        var password = document.forms["signupForm"]["password"].value;
+        var emailPattern = /^[a-zA-Z0-9._-]+@gmail\.com$/;
+        var digitPattern = /\d/;
+    
+        if (!username || !email || !password) {
+          alert("All fields are required.");
+          return false;
+        }
+    
+        if (!emailPattern.test(email)) {
+          alert("Email must be in xyz@gmail.com format.");
+          return false;
+        }
+    
+        if (password.length < 8 || !digitPattern.test(password)) {
+          alert("Password must be at least 8 characters and contain digits.");
+          return false;
+        }
+    
+        return true;
+      }
+    </script>
+
+<script>
+  document.getElementById('profilepic').addEventListener('change', function(){
+  const fileNameField = document.getElementById('file-name');
+  if(this.files.length > 0) {
+    fileNameField.value = this.files[0].name;
+  } else {
+    fileNameField.value = '';
+  }
+});
+</script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+   

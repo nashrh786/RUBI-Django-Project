@@ -1,0 +1,333 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Women Empowerment - RUBI</title>
+<!--
+SOFTY PINKO
+https://templatemo.com/tm-535-softy-pinko
+-->
+
+    <!-- Additional CSS Files --> 
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'main/css/templatemo-softy-pinko.css' %}">
+
+    <style>
+        /* Main dropdown hover effect */
+.nav .dropdown:hover > .dropdown-menu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Styling for nested dropdown */
+.nav .dropdown-menu {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s ease-in-out;
+}
+
+.nav .hover-dropdown:hover > .dropdown-menu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.search-box {
+    background-color: #fff;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.main-button-slider {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.search-box .btn-group button {
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+form.d-flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.profile-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ff5ba7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.profile-letter {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 200px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+
+
+
+    </style>
+
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="#" class="logo">
+                            <img src="{% static 'main/images/mylo.png' %}" alt="Softy Pinko" height="70" style="margin-top: -20px;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="{% url 'index' %}" class="active">Home</a></li>
+                            <li><a href="{% url 'index' %}#features">About Us</a></li>
+                            <li class="dropdown">
+                                <a href="#work-process" class="dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown hover-dropdown">
+                                        <!-- Make Health clickable -->
+                                        <a href="/health1" class="dropdown-link">Health
+                                            <i class="arrow-icon">&#9662;</i> </a>
+                                        <!-- Add dropdown toggle (arrow icon) -->
+                                        <!--<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">-->
+                                        <!---->
+                                        <!--<a href="{% url 'health1' %}" class="dropdown-toggle" data-bs-toggle="dropdown">Health</a>-->
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#meal">Rainbow Meal</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#sleep">Sleep</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#hydrate">Hydrate</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#exercise">Exercise</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#mental">Mental Health</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#meditate">Meditation</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li class="dropdown hover-dropdown">
+                                        <!-- Make education clickable -->
+                                        <a href="/education" class="dropdown-link">Education
+                                            <i class="arrow-icon">&#9662;</i> </a>
+                                        <!-- Add dropdown toggle (arrow icon) -->
+                                        <!--<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">-->
+                                        <!---->
+                                        <!--<a href="{% url 'health1' %}" class="dropdown-toggle" data-bs-toggle="dropdown">Health</a>-->
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#it">Technology & IT</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#bus">Business</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#care">Healthcare</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#art">Arts & Design</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#teach">Teaching</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#personal">Personal Development</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/job-portal">Job Portal</a></li>
+                                    <li><a class="dropdown-item" href="/chatbot">ChatBot</a></li>
+                                    <li><a class="dropdown-item" href="/discussion-panel">Discussion Panel</a></li>
+                                    <li><a class="dropdown-item" href="/support-24-7">Support 24/7</a></li>
+                                </ul>
+                            </li>
+                            <!-- ***** Domains Dropdown Start ***** -->
+                            <li class="dropdown hover-dropdown">
+                                <a href="{% url 'education' %}#work-process" class="dropdown-toggle">Domains</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#it">IT & Technology</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#bus">Business</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#care">Healthcare</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#art">Arts & Design</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#teach">Teaching</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#personal">Personal Development</a></li>
+                                </ul>
+                            </li>
+                            <!-- ***** Domains Dropdown End ***** -->
+                            <li><a href="#contact-us">Contact Us</a></li>
+
+                           {% if user.is_authenticated %}
+                            <li class="profile-menu">
+                                <div class="profile-icon" onclick="toggleDropdown()">
+                                    {% if user.employerprofile.profilepic %}
+                                        <img src="{{ user.employerprofile.profilepic.url }}" alt="Profile" class="profile-img">
+                                    {% else %}
+                                        <div class="profile-letter">{{ user.first_name|slice:":1"|upper }}</div>
+                                    {% endif %}
+                                </div>
+                                <div id="profileDropdown" class="profile-dropdown" style="display: none;">
+                                    <p>Hi, {{ user.username }}!</p>
+                                    <a href="{% url 'manage_redirect' %}">Manage your Account</a><br>
+                                    <a href="{% url 'logout' %}">Logout</a>
+                                </div>
+                            </li>
+                            {% endif %}
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h1 style="font-size:34px;"><strong>Job Opportunities That Shape</strong><br><strong>Your Future</strong></h1>
+                        <a href="{% url 'employer_signup1' %}" class="main-button-slider">Post A Job</a> 
+                        <a href="{% url 'signup' %}" class="main-button-slider">Want A Job</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+         <!-- Add this section below the login and signup buttons -->
+    <div class="container mt-4">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="search-box bg-white p-4 shadow-sm rounded">
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-outline-secondary me-2">Find a Job</button>
+                <button class="btn btn-primary">Find a Candidate</button>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-3 mb-2">
+                    <input type="text" class="form-control" placeholder="e.g., Graphic, Web Developer">
+                </div>
+                <div class="col-md-3 mb-2">
+                    <select class="form-select">
+                        <option selected>Category</option>
+                        <option value="1">Technology</option>
+                        <option value="2">Healthcare</option>
+                        <option value="3">Arts</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <input type="text" class="form-control" placeholder="Location">
+                </div>
+                <div class="col-md-3 mb-2">
+                    <button class="btn btn-primary w-100">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+
+    <!-- jQuery -->
+    <script src="{% static 'main/js/jquery-2.1.0.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'main/js/popper.js' %}"></script>
+    <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static 'main/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'main/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'main/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'main/js/imgfix.min.js' %}"></script> 
+    <script src="{% static 'main/js/custom.js' %}"></script>
+    
+    <!-- Global Init -->
+    <script src="{% static 'main/js/custom.js' %}"></script>
+
+     <script> 
+    function toggleDropdown() {
+        var dropdown = document.getElementById("profileDropdown");
+        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.closest('.profile-menu')) {
+            var dropdown = document.getElementById("profileDropdown");
+        if (dropdown && dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+    }
+    }
+    };
+    </script>
+    
+
+  </body>
+</html>

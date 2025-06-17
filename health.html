@@ -1,0 +1,159 @@
+{% load static %}
+<!-- main/templates/main/health.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Services</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Navbar (if you have a consistent navbar) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{% url 'index' %}">RUBI</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Service</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container mt-5">
+    <h1 class="text-center mb-4">The Greatest Health Is Wealth</h1>
+
+    <div class="row">
+        <!-- Rainbow Meal Section -->
+        <div class="col-md-4 text-center">
+            <h3>Rainbow Meal</h3>
+            <p>Learn about the benefits of a colorful and nutritious diet.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+
+        <!-- Sleep Section -->
+        <div class="col-md-4 text-center">
+            <h3>Sleep</h3>
+            <p>Understand the importance of a good night's sleep for your health.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+
+        <!-- Hydrate Section -->
+        <div class="col-md-4 text-center">
+            <h3>Hydrate</h3>
+            <p>Discover why staying hydrated is crucial for maintaining health.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+    </div>
+
+
+    <!-- Second Row: New Sections -->
+    <div class="row mt-5">
+    <!-- Fourth Section: Exercise -->
+        <div class="col-md-4 text-center">
+            <h3>Exercise</h3>
+            <p>Find out how regular physical activity can improve your health.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+
+        <!-- Fifth Section: Mental Health -->
+        <div class="col-md-4 text-center">
+            <h3>Mental Health</h3>
+            <p>Explore the importance of mental well-being for overall health.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+
+        <!-- Sixth Section: Meditation -->
+        <div class="col-md-4 text-center">
+            <h3>Meditation</h3>
+            <p>Learn how meditation can help reduce stress and improve your life.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+    </div>
+
+     <!-- Discussion Panel for Health Care -->
+    <div class="row mt-5 justify-content-center">
+        <div class="col-md-8">
+                
+            <div class="text-center">
+                <h2>Discussion Panel for Health Care</h2>
+
+                <div class="d-flex justify-content-center mb-3">
+                    <button class="btn btn-outline-primary mr-2">Like</button>
+                    <button class="btn btn-outline-secondary">Share</button>
+                </div>
+
+                <!-- Comment Box -->
+                <div class="card mx-auto" style="max-width: 600px;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Leave a comment:</h5>
+                        <form method="post" action="{% url 'health' %}">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <!--<div class="form-group">
+                                <label for="comment">Leave a comment:</label>
+                                <textarea class="form-control" id="comment" rows="3" name="comment"></textarea>
+                            </div>-->
+                            <button type="submit" class="btn btn-primary">Post Comment</button>
+                        </form>
+                
+                        <!-- Display comments here -->
+                        <div class="mt-4">
+                            {% for comment in comments %}
+                                <div class="border-bottom pb-3 mb-3">
+                                    <strong>User{{ forloop.counter }}:</strong>
+                                    <textarea class="form-control mt-1" rows="2" readonly>{{ comment.content }}</textarea>
+                                    <!--<p>{{ comment.content }}</p>-->
+                                    <small class="text-muted">{{ comment.created_at|date:"F j, Y, g:i a" }}</small>
+                                    <!-- Like button and count -->
+                                    <div class="mt-2">
+                                        <a href="{% url 'like_comment' comment.id %}" class="btn btn-outline-primary btn-sm">Like</a>
+                                        <span>{{ comment.likes }} like{{ comment.likes|pluralize }}</span>
+                                        <!-- Reply button -->
+                                        <button class="btn btn-outline-secondary btn-sm" type="button" data-toggle="collapse" data-target="#replyForm{{ comment.id }}">
+                                        Reply
+                                        </button>
+                                    </div>
+
+                                    <!-- Replies section -->
+                                    <div class="ml-4 mt-3">
+                                        {% for reply in comment.replies.all %}
+                                            <div class="border-bottom pb-2 mb-2">
+                                                <strong>{{ reply.user.username }}:</strong>
+                                                <p class="mb-1">{{ reply.content }}</p>
+                                                <small class="text-muted">{{ reply.created_at|date:"F j, Y, g:i a" }}</small>
+                                            </div>
+                                        {% empty %}
+                                            <p class="text-muted">No replies yet.</p>
+                                        {% endfor %}
+                                    </div>
+
+                                    <!-- Reply form -->
+                                    <div id="replyForm{{ comment.id }}" class="collapse mt-2">
+                                        <form method="post" action="{% url 'health' %}">
+                                            {% csrf_token %}
+                                            {{ reply_form.as_p }}
+                                            <input type="hidden" name="comment_id" value="{{ comment.id }}">
+                                            <button type="submit" name="reply" class="btn btn-primary btn-sm">Post Reply</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            {% empty %}
+                                <p>No comments yet. Be the first to comment!</p>
+                            {% endfor %}
+                            <!-- Add more comments as needed -->
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

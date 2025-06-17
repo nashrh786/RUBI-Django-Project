@@ -1,0 +1,53 @@
+<!-- main/templates/main/service.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Navbar (if you have a consistent navbar) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{% url 'index' %}">RUBI</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Service</a></li>
+            <!-- Add other menu items here -->
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">WHAT DO WE OFFER</h1>  <!-- Centered heading -->
+    <div class="row">
+        <!-- Left Side: Health, Education, Job Portal -->
+        <div class="col-md-6">
+            <h3>Services</h3>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="{% url 'health' %}">Health</a></li>
+                <li class="list-group-item">Education</li>
+                <li class="list-group-item">Job Portal</li>
+            </ul>
+        </div>
+
+        <!-- Right Side: Discussion Forum, Chatbot, Support 24/7 -->
+        <div class="col-md-6">
+            <h3>Additional Services</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Discussion Forum</li>
+                <li class="list-group-item">Chatbot - Magica</li>
+                <li class="list-group-item">Support 24/7</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

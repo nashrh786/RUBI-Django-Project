@@ -1,0 +1,459 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <title>Women Empowerment - RUBI</title>
+<!--
+SOFTY PINKO
+https://templatemo.com/tm-535-softy-pinko
+-->
+
+    <!-- Additional CSS Files --> 
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'main/css/templatemo-softy-pinko.css' %}">
+
+    <style>
+        /* Main dropdown hover effect */
+.nav .dropdown:hover > .dropdown-menu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Styling for nested dropdown */
+.nav .dropdown-menu {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s ease-in-out;
+}
+
+.nav .hover-dropdown:hover > .dropdown-menu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: #333;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Optional: Hover effect for dropdown items */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.button-group {
+  position: absolute;
+  top: 212px; /* move up or down as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; /* make sure it stays on top */
+}
+
+.header-text {
+  margin-top: -50px; /* adjust the value as needed */
+  z-index: 5;
+}
+
+.profile-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ff5ba7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.profile-letter {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 200px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+/* Custom radio button style */
+.btn-option {
+  border: 2px solid #ff5ba7;
+  color: #ff5ba7;
+  border-radius: 30px;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.btn-option input[type="radio"] {
+  display: none;
+}
+
+.btn-option span {
+  margin-left: 5px;
+}
+
+/* Checked state */
+.btn-option input[type="radio"]:checked + span {
+  color: white;
+  background-color: #ff5ba7;
+  padding: 8px 14px;
+  border-radius: 30px;
+}
+
+/* Hover effect */
+.btn-option:hover {
+  background-color: #ff5ba7;
+  color: white;
+}
+
+/* Submit button matching template style */
+.custom-submit-btn {
+  background-color: #ff5ba7;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.custom-submit-btn:hover {
+  background-color: #ff3e94;
+}
+.form-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+form input[type="text"], form select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 14px;
+    min-width: 180px;
+}
+
+    </style>
+
+    </head>
+    
+    <body>
+        
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="#" class="logo">
+                            <img src="{% static 'main/images/mylo.png' %}" alt="Softy Pinko" height="70" style="margin-top: -20px;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="#welcome" class="active">Home</a></li>
+                            <li><a href="#features">About Us</a></li>
+                            <li class="dropdown">
+                                <a href="#work-process" class="dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown hover-dropdown">
+                                        <!-- Make Health clickable -->
+                                        <a href="/health1" class="dropdown-link">Health
+                                            <i class="arrow-icon">&#9662;</i> </a>
+                                        <!-- Add dropdown toggle (arrow icon) -->
+                                        <!--<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">-->
+                                        <!---->
+                                        <!--<a href="{% url 'health1' %}" class="dropdown-toggle" data-bs-toggle="dropdown">Health</a>-->
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#meal">Rainbow Meal</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#sleep">Sleep</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#hydrate">Hydrate</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#exercise">Exercise</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#mental">Mental Health</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'health1' %}#meditate">Meditation</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li class="dropdown hover-dropdown">
+                                        <!-- Make education clickable -->
+                                        <a href="/education" class="dropdown-link">Education
+                                            <i class="arrow-icon">&#9662;</i> </a>
+                                        <!-- Add dropdown toggle (arrow icon) -->
+                                        <!--<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">-->
+                                        <!---->
+                                        <!--<a href="{% url 'health1' %}" class="dropdown-toggle" data-bs-toggle="dropdown">Health</a>-->
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#it">Technology & IT</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#bus">Business</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#care">Healthcare</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#art">Arts & Design</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#teach">Teaching</a></li>
+                                            <li><a class="dropdown-link" href="{% url 'education' %}#personal">Personal Development</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-link" href="{% url 'job' %}">Job Portal</a></li>
+                                    <li><a class="dropdown-item" href="/chatbot">ChatBot</a></li>
+                                    <li><a class="dropdown-item" href="/discussion-panel">Discussion Panel</a></li>
+                                    <li><a class="dropdown-item" href="/support-24-7">Support 24/7</a></li>
+                                </ul>
+                            </li>
+                            <!-- ***** Domains Dropdown Start ***** -->
+                            <li class="dropdown hover-dropdown">
+                                <a href="{% url 'education' %}#work-process" class="dropdown-toggle">Domains</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#it">IT & Technology</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#bus">Business</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#care">Healthcare</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#art">Arts & Design</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#teach">Teaching</a></li>
+                                    <li><a class="dropdown-link" href="{% url 'education' %}#personal">Personal Development</a></li>
+                                </ul>
+                            </li>
+                            <!-- ***** Domains Dropdown End ***** -->
+                            <li><a href="#contact-us">Contact Us</a></li>
+
+                            {% if user.is_authenticated %}
+                            <li class="profile-menu">
+                                <div class="profile-icon" onclick="toggleDropdown()">
+                                    {% if user.profile.profilepic %}
+                                        <img src="{{ user.profile.profilepic.url }}" alt="Profile" class="profile-img">
+                                    {% else %}
+                                        <div class="profile-letter">{{ user.first_name|slice:":1"|upper }}</div>
+                                    {% endif %}
+                                </div>
+                                <div id="profileDropdown" class="profile-dropdown" style="display: none;">
+                                    <p>Hi, {{ user.username }}!</p>
+                                    <a href="{% url 'manage_redirect' %}">Manage your Account</a><br>
+                                    <a href="{% url 'logout' %}">Logout</a>
+                                </div>
+                            </li>
+                            {% endif %}
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+
+        <!-- ***** Header Text Start ***** -->
+        <!--<div class="header-text">-->
+            
+            <div class="container">
+                <div class="form-card p-4" style="margin-top:120px; background-color: plum">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2 text-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                        <h1 class="section-title" style="color: #ffffff;">Job Portel</h1>
+                        <p class="mb-5" style="color: #ffffff;">Answer a quick question and let us guide you to the right resources!</p>
+                        <form method="GET" action="{% url 'empjob_page' %}" 
+                            style="background: #fff; padding: 20px; border-radius: 15px; display: flex; align-items: center; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                            {{ emp_job_form.keyword1 }}
+                            {{ emp_job_form.location1 }}
+                            {{ emp_job_form.category1 }}
+                            <button type="submit"
+                                style="background: linear-gradient(to right, #d64098); color: white; border: none; padding: 12px 25px; border-radius: 25px; font-size: 14px; cursor: pointer;">
+                               Search
+                            </button>
+                            <!--<button type="submit" style="background: linear-gradient(to right, #667eea, #764ba2); color: white; border: none; padding: 12px 25px; border-radius: 25px; font-size: 14px; cursor: pointer;">Search</button>-->
+                            <!-- Action Buttons 
+                            style="background: #fff; padding: 30px; border-radius: 15px; margin-top: 30px; display: flex; gap: 15px; align-items: center; justify-content: center; flex-wrap: wrap;">-->
+                        </form>
+                         <div style="margin-top: 30px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                                <a href="{% url 'post_job_page' %}"
+                                    style="background: linear-gradient(to right, #667eea, #764ba2); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-size: 14px;">
+                                    Post Job
+                                </a>
+                                <a href="{% url 'browse_candidates_page' %}" 
+                                    style="background: linear-gradient(to right, #667eea, #764ba2); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-size: 14px;">
+                                    Browse Candidates
+                                </a>
+                            </div>
+                    </div>
+                </div>
+                <!--<div class="row">
+                    <div class="col-lg-6 offset-lg-3">
+                        <div class="form-card p-4">
+                        <form method="post" class="text-center" id="health-form">
+                            {% csrf_token %}
+                            <div class="form-group mb-4">
+                                <label class="mb-3" style="font-weight: 600;">{{ form.concern.label }}</label>
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    {% for radio in form.concern %}
+                                    <label class="btn btn-option m-2">
+                                        {{ radio.tag }}
+                                        <span>{{ radio.choice_label }}</span>
+                                    </label>
+                                    {% endfor %}
+                                </div>
+                             </div>
+                            <button type="submit" class="btn btn-primary custom-submit-btn" style="background: linear-gradient(-135deg, #c850c0, #4158d0);">Apply Now</button>
+                        </form><button type="submit" class="btn btn-primary custom-submit-btn" style="background: linear-gradient(-135deg, #c850c0, #4158d0);">Browse Jobs</button>
+                        </div>
+                    </div>
+                </div>-->
+                </div>
+            </div>
+        </section>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+
+<div class="welcome-area" id="physical-health">
+
+    <!-- ***** Features Big Item Start ***** -->
+        <div class="container">
+            <div class="form-card p-4" style="margin-top:20px; background-color: plum">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 text-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <h1 class="section-title" style="color: #ffffff;">Physical Health</h1>
+                    <p class="mb-5" style="color: #ffffff;">Answer a quick question and let us guide you to the right resources!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="form-card p-4">
+                    <form method="post" class="text-center">
+                        {% csrf_token %}
+                        <div class="form-group mb-4">
+                            <label class="mb-3" style="font-weight: 600;">{{ physical_form.physical_concern.label }}</label>
+                            <div class="d-flex flex-wrap justify-content-center">
+                                {% for radio in physical_form.physical_concern %}
+                                <label class="btn btn-option m-2">
+                                    {{ radio.tag }}
+                                    <span>{{ radio.choice_label }}</span>
+                                </label>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary custom-submit-btn" style="background: linear-gradient(-135deg, #c850c0, #4158d0);">Show Me My Path</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    
+    <!-- jQuery -->
+    <script src="{% static 'main/js/jquery-2.1.0.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'main/js/popper.js' %}"></script>
+    <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static 'main/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'main/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'main/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'main/js/imgfix.min.js' %}"></script> 
+    
+    <!-- Global Init -->
+    <script src="{% static 'main/js/custom.js' %}"></script>
+
+    <script> 
+    function toggleDropdown() {
+        var dropdown = document.getElementById("profileDropdown");
+        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.closest('.profile-menu')) {
+            var dropdown = document.getElementById("profileDropdown");
+        if (dropdown && dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+    }
+    }
+    };
+    </script>
+
+  </body>
+</html>

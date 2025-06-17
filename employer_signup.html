@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employer Signup - RUBI</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #9b59b6, #8e44ad);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: white;
+            border-radius: 0 0 40px 40px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            margin: 0 15px;
+        }
+
+        .navbar a:hover {
+            color: #f62459;
+        }
+
+        .signup-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .signup-container h2 {
+            margin-bottom: 30px;
+            color: #8e44ad;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 30px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            margin-top: 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #8f94fb, #4e54c8);
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">
+        <img src="{% static 'images/logo.png' %}" alt="RUBI" style="height: 50px;">
+    </div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Services</a>
+        <a href="#">Domains</a>
+        <a href="#">Contact Us</a>
+    </div>
+</div>
+
+<div class="signup-container">
+    <h2>Employer Signup</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="company_name" placeholder="Company Name" required><br>
+        <input type="text" name="company_address" placeholder="Company Address" required><br>
+        <input type="email" name="email" placeholder="Email Address" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
+
+</body>
+</html>
